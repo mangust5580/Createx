@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html class="page main-page" lang="en">
+@include('config/head.html', {
+  title: "Createx | Main Page",
+  description: "Cras ultrices leo vitae non viverra"
+})
+
+<body id="page" class="page__body">
+  @include('layout/header/main-header.html', {
+    "modify": "main-header--main",
+  })
+  <main class="page-main">
+    @include('common/hero/main-hero.html')
+    @include('common/about/about.html')
+    @include('common/mission/mission-form.html')
+    @include('common/services/services.html')
+    @include('common/portfolio/portfolio-slider.html')
+    @include('common/partners/partners.html')
+    @include('common/testimonials/testimonials.html')
+    @include('common/facts/facts.html')
+    @include('common/recent-news/recent-news.html')
+    @include('common/contacts/contacts.html')
+  </main>
+  @include('layout/footer/main-footer.html')
+</body>
+
+</html>

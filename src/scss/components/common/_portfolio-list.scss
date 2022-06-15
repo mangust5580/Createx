@@ -1,0 +1,16 @@
+.portfolio-list {
+  @include list-reset;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 60px;
+  gap: var(--grid-gap);
+}
+
+.portfolio-list__item {
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--border-radius-main);
+  box-shadow: inset var(--box-shadow-main);
+  background-color: var(--color-white);
+}

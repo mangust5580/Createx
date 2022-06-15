@@ -1,0 +1,76 @@
+.team__container {
+  padding-top: 60px;
+  padding-bottom: 120px;
+
+  @include md {
+    padding-bottom: 80px;
+  }
+}
+
+.team-list {
+  @include list-reset;
+  @include grid-12;
+
+  margin-bottom: 80px;
+  row-gap: 60px;
+
+  @include md {
+    margin-bottom: 60px;
+    row-gap: 60px;
+  }
+
+  @media screen and (max-width: 480px) {
+    margin-bottom: 30px;
+    row-gap: 30px;
+  }
+}
+
+.team-list__item {
+  grid-column: 3 span;
+
+  @include lg {
+    grid-column: 4 span;
+  }
+
+  @include md {
+    grid-column: 6 span;
+  }
+
+  @media screen and (max-width: 480px) {
+    grid-column: 12 span;
+  }
+}
+
+.team__text {
+  p {
+    @include model-reset;
+    @include font(18px, 27px);
+  }
+
+  a {
+    @include link-reset;
+    @include font(18px, 27px);
+
+    border-bottom: 1px solid currentcolor;
+    color: var(--color-primary);
+    transition: border ease-in-out 0.2s, opacity ease-in-out 0.2s;
+
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 3px;
+      border-radius: 2px;
+
+      &:not(:focus-visible) {
+        outline: none;
+      }
+    }
+
+    &:hover {
+      border-bottom: 1px solid transparent;
+    }
+
+    &:active {
+      color: var(--color-danger);
+    }
+  }
+}

@@ -1,0 +1,64 @@
+.positions-content {
+  .btn-group {
+    @include lg {
+      flex-direction: column;
+    }
+  }
+}
+
+.positions-content__container {
+  padding-top: 120px;
+  padding-bottom: 90px;
+
+  @include lg {
+    padding-top: 100px;
+  }
+
+  @include md {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+
+  @include sm {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+
+  @include mb {
+    padding-bottom: 20px;
+  }
+}
+
+.positions-content__info {
+  @include grid-12;
+
+  @include md {
+    display: block;
+  }
+}
+
+.positions-content__list {
+  grid-column: 7 span;
+
+  @include md {
+    display: flex;
+    margin-bottom: 40px;
+    row-gap: 30px;
+  }
+}
+
+.positions-content__looking {
+  grid-column: 5 span;
+
+  @include md {
+    grid-column: 12 span;
+  }
+}
+
+.positions-content__btn {
+  width: 44%;
+
+  @include lg {
+    width: 100%;
+  }
+}

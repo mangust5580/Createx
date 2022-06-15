@@ -1,0 +1,29 @@
+<form id="submit-request" action="#" class="contacts__form contacts-form form" autocomplete="off">
+	<h3 class="form-title">A quick way to discuss details</h3>
+	<fieldset class="form__fieldset">
+		<legend class="form__legend">Contacts</legend>
+		<label class="form__label">
+			<span class="form__caption">Name*</span>
+			<input class="form__input field" type="text" name="name" placeholder="Your name" aria-label="Enter your name" value="" required>
+		</label>
+		<label class="form__label">
+			<span class="form__caption">Phone*</span>
+			<input class="form__input field" type="tel" name="phone" placeholder="Your phone number" aria-label="Enter your phone" value="" required>
+		</label>
+		<label class="form__label">
+			<span class="form__caption">Email</span>
+			<input class="form__input field" type="email" name="email" placeholder="Your working email" aria-label="Enter your email" value="">
+		</label>
+	</fieldset>
+	<label class="form__label">
+		<span class="form__caption">Message*</span>
+		<textarea class="form__textarea textarea" name="message" placeholder="Your message" aria-label="Enter your message" required></textarea>
+	</label>
+	<label class="form__label checkbox-block">
+		<input class="checkbox-block__checkbox checkbox js-checkbox-agreement" type="checkbox" name="agreement">
+		<span class="checkbox-block__text">I agree to receive communications from Createx Construction Bureau.</span>
+	</label>
+	<div class="centered">
+		<button class="btn btn--small" type="submit">Send request</button>
+	</div>
+</form>

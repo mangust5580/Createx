@@ -1,0 +1,31 @@
+.logo {
+  transition: opacity ease-in-out 0.2s;
+
+  &[href] {
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 3px;
+      border-radius: 2px;
+
+      &:not(:focus-visible) {
+        outline: none;
+      }
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.4;
+    }
+  }
+
+  @include xl {
+    max-width: 120px;
+  }
+
+  @include lg {
+    max-width: none;
+  }
+}

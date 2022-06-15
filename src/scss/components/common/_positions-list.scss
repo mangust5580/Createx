@@ -1,0 +1,6 @@
+.positions-list {
+  @include list-reset;
+  @include flex-column;
+
+  gap: 24px;
+}

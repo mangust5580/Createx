@@ -1,0 +1,45 @@
+.pricing {
+  position: relative;
+  z-index: 1;
+
+  .table__col {
+    @include xl {
+      padding: 24px 18px;
+    }
+
+    @include lg {
+      padding: 20px 6px;
+    }
+  }
+
+  .table-wrapper {
+    overflow: hidden;
+
+    @include md {
+      overflow-x: auto;
+    }
+  }
+
+  @include md {
+    .table-wrapper {
+      overflow-x: auto;
+    }
+  }
+}
+
+.pricing__container {
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+
+.pricing__decor {
+  @include absolute(left -10px top 0);
+
+  z-index: -1;
+}
+
+.pricing__table {
+  @include md {
+    width: 1200px;
+  }
+}

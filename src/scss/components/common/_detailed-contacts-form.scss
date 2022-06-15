@@ -1,0 +1,46 @@
+.detailed-contacts-form {
+  @include flex-wrap;
+
+  justify-content: space-between;
+  max-width: 600px;
+  gap: 24px 30px;
+
+  .form__label {
+    margin-bottom: 0;
+    width: calc(50% - 30px / 2);
+
+    &--wide {
+      width: 100%;
+    }
+
+    @include lg {
+      width: 100%;
+    }
+  }
+
+  .form__legend {
+    @include font(14px, 21px);
+
+    color: var(--color-gray--800);
+  }
+
+  .radio-group {
+    width: calc(50% - 30px / 2);
+  }
+
+  .checkbox-block {
+    @include lg {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.detailed-contacts-form__bottom {
+  @include flex-start-v;
+
+  justify-content: space-between;
+
+  @include lg {
+    display: block;
+  }
+}

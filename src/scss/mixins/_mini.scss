@@ -1,0 +1,130 @@
+@mixin v-hidden {
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+}
+
+@mixin v-visible {
+  position: inherit;
+  z-index: inherit;
+  overflow: inherit;
+  margin: inherit;
+  border: inherit;
+  padding: inherit;
+  width: inherit;
+  height: inherit;
+  white-space: inherit;
+  clip: inherit;
+}
+
+@mixin grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--grid-gap);
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+  content: $content;
+  position: $pos;
+  display: $display;
+}
+
+@mixin position($position, $args) {
+  position: $position;
+
+  @each $o in top right bottom left {
+    $i: list.index($args, $o);
+
+    @if $i and $i + 1 <= length($args) and type-of(nth($args, $i + 1)) == number {
+      #{$o}: list.nth($args, $i + 1);
+    }
+  }
+}
+
+@mixin absolute($args) {
+  @include position("absolute", $args);
+}
+
+@mixin fixed($args) {
+  @include position("fixed", $args);
+}
+
+@mixin relative($args) {
+  @include position("relative", $args);
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin flex-center($wrap: null) {
+  display: flex;
+  flex-wrap: $wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-center-column {
+  @include flex-center;
+
+  flex-direction: column;
+}
+
+@mixin flex-center-v($wrap: null) {
+  display: flex;
+  flex-wrap: $wrap;
+  align-items: center;
+}
+
+@mixin flex-center-h($wrap: null) {
+  display: flex;
+  flex-wrap: $wrap;
+  justify-content: center;
+}
+
+@mixin flex-start-v($wrap: null) {
+  display: flex;
+  flex-wrap: $wrap;
+  align-items: start;
+}
+
+@mixin box($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin bg-cover($path, $color: null, $repeat: no-repeat) {
+  background-image: url("../images/#{$path}");
+  background-position: center;
+  background-size: cover;
+  background-repeat: $repeat;
+  background-color: $color;
+}
+
+@mixin bg-contain($path, $color: null, $repeat: no-repeat) {
+  background-image: url("../images/#{$path}");
+  background-position: center;
+  background-size: contain;
+  background-repeat: $repeat;
+  background-color: $color;
+}
+
+@mixin icon-svg($name, $size: cover) {
+  background-image: url("../images/icons/icon-#{$name}.svg");
+  background-position: center;
+  background-size: $size;
+  background-repeat: no-repeat;
+}

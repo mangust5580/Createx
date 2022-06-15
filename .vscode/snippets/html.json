@@ -1,0 +1,176 @@
+{
+  "logo": {
+    "scope": "html",
+    "prefix": "g-logo-svg",
+    "body": [
+      "<a class=\"logo\" href=\"index.html\">",
+      "  <img src=\"images/logo.svg\" loading=\"lazy\" width=\"$1\" height=\"$2\" alt=\"$3 - Логотип\">",
+      "</a>"
+    ],
+    "description": "Snippet for logo"
+  },
+  "svguse": {
+    "scope": "html",
+    "prefix": "g-use",
+    "body": [
+      "<svg class=\"$4\" width=\"$2\" height=\"$3\" aria-hidden=\"true\">",
+      "  <use xlink:href=\"images/sprite.svg#icon-$1\"></use>",
+      "</svg>"
+    ],
+    "description": "Snippet for use svg sprites"
+  },
+  "navigation": {
+    "scope": "html",
+    "prefix": "g-nav",
+    "body": [
+      "<nav class=\"main-nav\" title=\"$1\">",
+      "  <ul class=\"nav-list\">",
+      "    <li class=\"nav-list__item\">",
+      "      <a href=\"#\" class=\"nav-list__link\"></a>",
+      "    </li>",
+      "    <li class=\"nav-list__item\">",
+      "      <a href=\"#\" class=\"nav-list__link\"></a>",
+      "    </li>",
+      "    <li class=\"nav-list__item\">",
+      "      <a href=\"#\" class=\"nav-list__link\"></a>",
+      "    </li>",
+      "    <li class=\"nav-list__item\">",
+      "      <a href=\"#\" class=\"nav-list__link\"></a>",
+      "    </li>",
+      "  </ul>",
+      "</nav>"
+    ],
+    "description": "Snippet for navigation"
+  },
+  "social": {
+    "scope": "html",
+    "prefix": "g-social",
+    "body": [
+      "<ul class=\"social\" title=\"$1\">",
+      "  <li class=\"social__item\"><a href=\"#\" target=\"_blank\" class=\"social__link social__link--fb\" aria-label=\"Наша страничка в Фейсбуке\"></a></li>",
+      "  <li class=\"social__item\"><a href=\"#\" target=\"_blank\" class=\"social__link social__link--vk\" aria-label=\"Наша страничка во Вконтакте\"></a></li>",
+      "  <li class=\"social__item\"><a href=\"#\" target=\"_blank\" class=\"social__link social__link--tw\" aria-label=\"Наша страничка в Твиттере\"></a></li>",
+      "</ul>"
+    ],
+    "description": "Snippet for social links"
+  },
+  "basic-form": {
+    "prefix": "g-form",
+    "body": [
+      "<form action=\"#\" class=\"form\">",
+      "  <label class=\"form__label\">",
+      "    <input type=\"text\" name=\"Имя\" class=\"input-reset form__input\" placeholder=\"Имя\">",
+      "  </label>",
+      "  <button class=\"btn-reset form__btn\">Отправить</button>",
+      "</form>"
+    ],
+    "description": "Snippet for basic form"
+  },
+  "basic-swiper": {
+    "prefix": "g-swiper",
+    "body": [
+      "<div class=\"swiper $1\">",
+      "  <div class=\"swiper-wrapper\">",
+      "     <div class=\"swiper-slide\">",
+      "     </div>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "Snippet for basic swiper structure"
+  },
+  "picture": {
+    "prefix": "g-picture",
+    "body": [
+    "  <picture class=\"$1\">",
+		"    <source type=\"image/avif\" srcset=\"images/$2.avif, images/$2@2x.avif 2x\">",
+		"    <source type=\"image/webp\" srcset=\"images/$2.webp, images/$2@2x.webp 2x\">",
+		"    <img loading=\"lazy\" src=\"images/$2.png\" srcset=\"images/$2@2x.png 2x\" width=\"$3\" height=\"$4\" alt=\"$5\">",
+	  "   </picture>"
+    ],
+    "description": "Snippet for basic picture structure"
+  },
+  "picture-present": {
+    "prefix": "g-picture-present",
+    "body": [
+    "  <picture class=\"$1\">",
+		"    <source type=\"image/avif\" srcset=\"images/$2.avif, images/$2@2x.avif 2x\">",
+		"    <source type=\"image/webp\" srcset=\"images/$2.webp, images/$2@2x.webp 2x\">",
+		"    <img loading=\"lazy\" src=\"images/$2-bg.png\" srcset=\"images/$2-bg@2x.png 2x\" width=\"$3\" height=\"$4\" alt=\"Декоративное изображение\" aria-hidden=\"true\">",
+	  "   </picture>"
+    ],
+    "description": "Snippet for basic picture present structure"
+  },
+  "picture-bg": {
+    "prefix": "g-picture-bg",
+    "body": [
+    "  <picture class=\"picture-bg\">",
+		"    <source type=\"image/avif\" srcset=\"images/$2-bg.avif, images/$2-bg@2x.avif 2x\">",
+		"    <source type=\"image/webp\" srcset=\"images/$2-bg.webp, images/$2-bg@2x.webp 2x\">",
+		"    <img loading=\"lazy\" src=\"images/$2-bg.png\" srcset=\"images/$2-bg@2x.png 2x\" alt=\"Декоративное изображение\" aria-hidden=\"true\">",
+	  "   </picture>"
+    ],
+    "description": "Snippet for basic picture background"
+  },
+  "svg-img": {
+    "scope": "html",
+    "prefix": "g-svg-img",
+    "body": [
+      "<img loading=\"lazy\" src=\"images/$1.svg\" width=\"$4\" height=\"$5\" alt=\"$3\">"
+    ],
+    "description": "Snippet for simple html svg images"
+  },
+  "input-radio": {
+    "scope": "html",
+    "prefix": "g-input-radio",
+    "body": [
+      "<label>",
+      "  <span>$1</span>",
+      "  <input class=\"$2\" type=\"radio\" name=\"$3\" value=\"$4\">",
+      "</label>"
+    ],
+    "description": "Snippet for simple html svg images"
+  },
+  "input-checkbox": {
+    "scope": "html",
+    "prefix": "g-input-checkbox",
+    "body": [
+      "<label>",
+      "  <span>$1</span>",
+      "  <input class=\"$2\" type=\"checkbox\" name=\"$3\" value=\"$4\">",
+      "</label>"
+    ],
+    "description": "Snippet for simple html svg images"
+  },
+  "switcher": {
+    "scope": "html",
+    "prefix": "g-switcher",
+    "body": [
+      "<fieldset class=\"switcher\">",
+      "  <legend class=\"switcher__legend\">$1</legend>",
+      "  <label>",
+      "    <span>$2</span>",
+      "    <input class=\"switcher__radio $3\" type=\"radio\" name=\"$4\" value=\"$5\">",
+      "  </label>",
+      "  <label>",
+      "    <span>$2</span>",
+      "    <input class=\"switcher__radio $3\" type=\"radio\" name=\"$6\" value=\"$7\">",
+      "  </label>",
+      "</fieldset>"
+    ],
+    "description": "Snippet for simple html svg images"
+  },
+  "range": {
+    "scope": "html",
+    "prefix": "g-range",
+    "body": [
+      "<fieldset class=\"$1__fieldset range\">",
+      "    <legend class=\"$2__legend\">$3</legend>",
+      "    <label class=\"range__label\">",
+      "    <input class=\"range__input\" id=\"$4\" type=\"range\" name=\"$5\" step=\"$6\" min=\"$7\" max=\"$8\">",
+      "    <output class=\"range__volume\" id=\"$9\" for=\"$10\">$11</output>",
+      "  </label>",
+      "</fieldset>"
+    ],
+    "description": "Snippet for simple html svg images"
+  }
+}

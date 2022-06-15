@@ -1,0 +1,17 @@
+.employee-benefits__container {
+  padding-top: 90px;
+  padding-bottom: 180px;
+
+  @include md {
+    padding-top: 80px;
+    padding-bottom: 140px;
+  }
+
+  @include md {
+    padding-bottom: 100px;
+  }
+
+  @include mb {
+    padding-bottom: 80px;
+  }
+}

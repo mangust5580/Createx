@@ -1,0 +1,46 @@
+.project-goal-list {
+  border-radius: var(--border-radius-main);
+  padding: 40px 60px;
+  width: 500px;
+  box-shadow: var(--box-shadow-main);
+
+  @include sm {
+    padding: 20px 30px;
+    width: 100%;
+    box-shadow: none;
+  }
+}
+
+.project-goal-list__item {
+  display: flex;
+  margin-bottom: 16px;
+  white-space: nowrap;
+  gap: 20px;
+
+  @include sm {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+  }
+}
+
+.project-goal-list__term {
+  @include font(16px, 26px);
+
+  width: 120px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-gray--900);
+
+  @include sm {
+    width: 100%;
+  }
+}
+
+.project-goal-list__definition {
+  @include model-reset;
+  @include font(16px, 26px);
+
+  color: var(--color-gray--700);
+}

@@ -1,0 +1,47 @@
+.nav-list {
+  @include list-reset;
+  @include flex-center-v;
+
+  gap: 20px 40px;
+
+  @include xl {
+    gap: 20px 24px;
+  }
+
+  @include lg {
+    display: none;
+  }
+}
+
+.nav-list__link {
+  @include link-reset;
+  @include font(16px, 25px);
+
+  font-weight: 700;
+  color: var(--color-gray--800);
+  transition: opacity ease-in-out 0.2s, color ease-in-out 0.2s;
+
+  &[href] {
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 3px;
+      border-radius: 2px;
+
+      &:not(:focus-visible) {
+        outline: none;
+      }
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      color: var(--color-danger);
+    }
+  }
+
+  &--active {
+    color: var(--color-primary);
+  }
+}

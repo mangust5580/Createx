@@ -1,0 +1,24 @@
+.view-more {
+  @include flex-center;
+
+  gap: 20px 40px;
+
+  @include lg {
+    @include flex-column;
+  }
+}
+
+.view-more__subtitle {
+  @include model-reset;
+  @include font(28px, 42px);
+
+  color: var(--color-gray--900);
+
+  @include lg {
+    text-align: center;
+  }
+
+  @include sm {
+    @include font(26px, 40px);
+  }
+}

@@ -1,0 +1,105 @@
+.comment {
+  display: flex;
+  gap: 30px;
+
+  @include lg {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.comment__col {
+  &--info {
+    @include flex-column;
+
+    width: calc(100% - 630px);
+    gap: 8px;
+
+    @include lg {
+      width: 100%;
+    }
+  }
+
+  &--content {
+    width: 630px;
+
+    @include lg {
+      width: 100%;
+    }
+  }
+}
+
+.comment__author {
+  @include font(18px, 27px);
+
+  font-weight: 700;
+  color: var(--color-gray--900);
+}
+
+.comment__time {
+  @include font(14px, 21px);
+
+  color: var(--color-gray--700);
+}
+
+.comment__body {
+  @include font(16px, 26px);
+
+  margin-bottom: 16px;
+  color: var(--color-gray--800);
+
+  a {
+    @include link-reset;
+
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+
+  * {
+    @include model-reset;
+
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.comment__reply {
+  @include btn-reset;
+  @include font(14px, 21px);
+
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-gray--700);
+  transition: transform ease-in-out 0.2s, color ease-in-out 0.2s;
+  gap: 8px;
+
+  &:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+    border-radius: 2px;
+
+    &:not(:focus-visible) {
+      outline: none;
+    }
+  }
+
+  &:hover {
+    color: var(--color-primary);
+    transform: scale(1.1);
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+}
+
+.comment__reply-icon {
+  @include box(16px);
+
+  display: block;
+  fill: currentcolor;
+  object-fit: cover;
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="120px"
+	 height="64px" viewBox="0 0 120 64" enable-background="new 0 0 120 64" xml:space="preserve">
+<g id="Layer_1" display="none">
+	<image display="inline" overflow="visible" width="120" height="64" xlink:href="../partners/partners-6.png" >
+	</image>
+	<path display="inline" d="M27.71,18.581L27.71,18.581c-6.194,4.774-12.387,9.548-18.581,14.323h36.968
+		C39.968,28.129,33.839,23.355,27.71,18.581z"/>
+	<circle display="inline" fill="#E0A31B" cx="43.823" cy="16.5" r="5.081"/>
+</g>
+<g id="Layer_2">
+	<path fill="#1DDD9D" d="M27.71,13.581L27.71,13.581c-6.194,4.774-12.387,9.548-18.581,14.323h36.968
+		C39.968,23.129,33.839,18.355,27.71,13.581z"/>
+	<circle fill="#F2C05C" cx="43.823" cy="11.5" r="5.081"/>
+	<rect x="14.258" y="27.419" fill="#1DDD9D" width="26.613" height="16.258"/>
+	<text transform="matrix(1.1296 0 0 1 56.6455 28.3867)"><tspan x="0" y="0" font-family="'Arial-BoldMT'" font-size="12px">Sunset</tspan><tspan x="0" y="12" font-family="'Arial-BoldMT'" font-size="12px">Realty</tspan></text>
+</g>
+</svg>

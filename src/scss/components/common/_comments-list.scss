@@ -1,0 +1,6 @@
+.comments-list {
+  @include list-reset;
+  @include flex-column;
+
+  gap: 60px;
+}

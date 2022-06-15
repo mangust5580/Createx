@@ -1,0 +1,18 @@
+.work-slider-thumbs {
+  .swiper-slide {
+    border-radius: var(--border-radius-main);
+    opacity: 0.6;
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+}
+
+.work-slider-thumbs__picture {
+  img {
+    @include box(100%);
+  }
+}

@@ -1,0 +1,149 @@
+.main-footer {
+  color: f-alpha(var(--color-white), 0.6);
+  background-color: var(--color-gray--900);
+}
+
+.main-footer__container {
+  @include grid-12;
+
+  grid-template-rows: 3fr 3fr 1fr;
+  padding-top: 52px;
+  padding-bottom: 30px;
+  gap: 100px 50px;
+
+  @include md {
+    grid-template-rows: 3fr 3fr 0fr;
+    gap: 80px 50px;
+  }
+
+  @include sm {
+    display: block;
+  }
+}
+
+.main-footer__col {
+  &--left {
+    grid-column: 7 span;
+
+    @include lg {
+      grid-column: 5 span;
+    }
+
+    @include sm {
+      grid-column: 12 span;
+      margin-bottom: 80px;
+    }
+  }
+
+  &--right {
+    grid-column: 5 span;
+
+    @include lg {
+      grid-column: 7 span;
+    }
+
+    @include sm {
+      grid-column: 12 span;
+      margin-bottom: 80px;
+    }
+  }
+}
+
+.main-footer__col-item {
+  @include flex-center-v;
+
+  margin-bottom: 24px;
+
+  @include lg {
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+  }
+
+  @include sm {
+    align-items: center;
+  }
+}
+
+.main-footer__logo {
+  margin-right: 40px;
+
+  @include lg {
+    margin-right: 0;
+  }
+
+  @include sm {
+    align-items: center;
+  }
+}
+
+.main-footer__desc {
+  @include model-reset;
+  @include font(14px, 21px);
+
+  width: 100%;
+  max-width: 500px;
+
+  @include sm {
+    order: 2;
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+.main-footer__address-block {
+  grid-column: 5 span;
+  margin-right: 75px;
+
+  @include md {
+    margin-right: 0;
+  }
+
+  @include sm {
+    justify-self: center;
+    grid-column: 12 span;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+}
+
+.main-footer__form {
+  .form__input {
+    border-color: f-alpha(var(--color-white), 0.2);
+    color: f-alpha(var(--color-white), 0.6);
+    background-color: f-alpha(var(--color-white), 0.2);
+  }
+
+  @include sm {
+    @include flex-column;
+  }
+}
+
+.main-footer__nav {
+  grid-column: 7 span;
+
+  @include sm {
+    display: block;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+}
+
+.main-footer__copyright {
+  @include flex-center-v;
+
+  grid-column: 12 span;
+  color: var(--color-white);
+
+  @include sm {
+    justify-content: center;
+  }
+}
+
+.footer-nav__col {
+  @include sm {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+}

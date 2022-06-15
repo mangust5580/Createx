@@ -1,0 +1,14 @@
+.checkbox-group__list {
+  @include list-reset;
+  @include flex-column;
+
+  gap: 20px;
+}
+
+.checkbox-group__label {
+  cursor: pointer;
+
+  span {
+    margin-left: 30px;
+  }
+}

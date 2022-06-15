@@ -1,0 +1,85 @@
+.subscribe-form {
+  .form__caption {
+    @include v-hidden;
+  }
+
+  .form__label {
+    @include model-reset;
+
+    width: 100%;
+  }
+
+  .form__input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: border ease-in-out 0.2s, box-shadow ease-in-out 0.2s;
+
+    &:focus {
+      outline: none;
+      border: 1px solid rgb(255 90 48 / 40%);
+      box-shadow: var(--box-shadow-main);
+    }
+
+    @include sm {
+      margin-bottom: 20px;
+      border-radius: var(--border-radius-main);
+    }
+  }
+}
+
+.subscribe-form__caption {
+  @include model-reset;
+  @include font(24px, 36px);
+
+  margin-bottom: 24px;
+  color: var(--color-white);
+
+  @include sm {
+    text-align: center;
+  }
+}
+
+.subscribe-form__items {
+  @include flex-center-v;
+
+  margin-bottom: 16px;
+
+  .form__label {
+    @include sm {
+      margin-bottom: 12px;
+    }
+  }
+
+  @include sm {
+    display: block;
+    order: 3;
+  }
+}
+
+.subscribe-form__btn-submit {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  letter-spacing: normal;
+  text-transform: uppercase;
+
+  @include sm {
+    margin-left: 50%;
+    border-radius: var(--border-radius-main);
+    width: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media screen and (max-width: 400px) {
+    margin-left: 0;
+    width: 100%;
+    transform: none;
+  }
+}
+
+.subscribe-form__desc {
+  @include model-reset;
+
+  @include sm {
+    margin-bottom: 20px;
+  }
+}

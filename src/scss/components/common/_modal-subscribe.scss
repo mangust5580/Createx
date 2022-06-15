@@ -1,0 +1,36 @@
+.modal-subscribe {
+  .form__legend {
+    @include v-hidden;
+  }
+
+  .subscribe-form .form__caption {
+    @include v-visible;
+
+    margin-bottom: 8px;
+  }
+
+  .form__label {
+    margin-bottom: 20px;
+
+    @include sm {
+      margin-bottom: 0;
+    }
+  }
+
+  .form__fieldset {
+    @include flex-column;
+
+    margin-bottom: 40px;
+    gap: 20px;
+
+    @include sm {
+      margin-bottom: 20px;
+      gap: 10px;
+    }
+  }
+
+  .subscribe-form__btn-submit {
+    border-radius: var(--border-radius-main);
+    width: 100%;
+  }
+}

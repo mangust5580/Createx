@@ -1,0 +1,11 @@
+.slider-nav__btn {
+  &:hover {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,51 @@
+.we-offer__container {
+  @include grid-12;
+
+  padding-top: 120px;
+  padding-bottom: 80px;
+
+  @include lg {
+    display: block;
+  }
+
+  @include lg {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+  @include lg {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  @include sm {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+}
+
+.we-offer__picture {
+  grid-column: 7 span;
+  background-color: var(--color-gray--300);
+
+  img {
+    @include box(100%);
+  }
+
+  @include lg {
+    margin-bottom: 30px;
+  }
+}
+
+.we-offer__content {
+  grid-column: 5 span;
+  padding-left: 55px;
+
+  @include lg {
+    padding-left: 0;
+  }
+}
+
+.we-offer__title {
+  font-family: var(--font-family-secondary);
+}

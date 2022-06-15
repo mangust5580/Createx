@@ -1,0 +1,79 @@
+.icon-boxes {
+  --boxes-gap: 84px;
+
+  @include list-reset;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--boxes-gap) calc(var(--boxes-gap) * 2);
+
+  &--values {
+    @include grid-12;
+
+    .icon-boxes__item {
+      grid-column: 3 span;
+
+      @include xl {
+        grid-column: 6 span;
+      }
+    }
+
+    .icon-box__icon {
+      margin-bottom: 20px;
+      fill: var(--color-gray--600);
+    }
+
+    .icon-box__value {
+      @include font(46px, 60px);
+
+      display: inline-block;
+      margin-bottom: 8px;
+      width: 100%;
+      font-weight: 700;
+      white-space: nowrap;
+      color: var(--color-primary);
+    }
+
+    .icon-box__desc {
+      color: var(--color-gray--900);
+    }
+
+    @include xl {
+      row-gap: 80px;
+    }
+  }
+
+  @include lg {
+    --boxes-gap: 30px;
+  }
+
+  @include md {
+    --boxes-gap: 20px;
+  }
+
+  @include sm {
+    grid-template-columns: inherit;
+    gap: 50px 0;
+  }
+}
+
+.icon-boxes__item {
+  position: relative;
+  text-align: center;
+
+  &:not(:last-child) {
+    &::before {
+      @include pseudo;
+      @include bg-cover("divider.svg");
+
+      right: calc(-1 * var(--boxes-gap));
+      top: 0;
+      bottom: 0;
+      width: 1px;
+
+      @include sm {
+        display: none;
+      }
+    }
+  }
+}

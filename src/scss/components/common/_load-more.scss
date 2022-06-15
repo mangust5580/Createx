@@ -1,0 +1,45 @@
+.load-more {
+  @include btn-reset;
+
+  display: inline-flex;
+  align-items: center;
+  transition: color ease-in-out 0.2s;
+  gap: 16px;
+
+  &:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+    border-radius: 2px;
+
+    &:not(:focus-visible) {
+      outline: none;
+    }
+  }
+
+  &:hover {
+    color: var(--color-primary);
+
+    .load-more__text {
+      color: inherit;
+    }
+
+    .load-more__icon {
+      fill: currentcolor;
+    }
+  }
+
+  &:active {
+    color: var(--color-danger);
+  }
+}
+
+.load-more__icon {
+  vertical-align: middle;
+}
+
+.load-more__text {
+  @include font(16px, 26px);
+
+  font-weight: 700;
+  color: var(--color-gray--800);
+}

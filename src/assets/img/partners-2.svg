@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="120px"
+	 height="64px" viewBox="0 0 120 64" enable-background="new 0 0 120 64" xml:space="preserve">
+<g id="Layer_1" display="none">
+	<image display="inline" overflow="visible" width="120" height="64" xlink:href="../partners/partners-2.png" >
+	</image>
+</g>
+<g id="Layer_2">
+	<path fill="#FF0808" d="M4.903,26.29c6.065,0.785,12.129,1.57,18.194,2.355v-5.419H4.903C4.903,24.247,4.903,25.269,4.903,26.29z"
+		/>
+	<rect x="4.903" y="29.645" fill="#F90000" width="18.194" height="5.419"/>
+	<path fill="#FF0000" d="M4.903,41.484h18.194v-5.419c-6.065,0.849-12.129,1.699-18.194,2.548
+		C4.903,39.57,4.903,40.527,4.903,41.484z"/>
+	<text transform="matrix(0.9667 0 0 1 26.0645 37.4838)" font-family="'Arial-BoldMT'" font-size="14px">HIGHER FIT</text>
+</g>
+</svg>

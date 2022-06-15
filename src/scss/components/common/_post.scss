@@ -1,0 +1,145 @@
+.post__cover {
+  display: block;
+  margin-top: -80px;
+  width: 100%;
+  background-color: var(--color-gray--500);
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.post__wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  max-width: 840px;
+
+  @include md {
+    padding-top: 60px;
+  }
+
+  @include sm {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+}
+
+.post__content {
+  margin-bottom: 40px;
+
+  * {
+    @include font(16px, 26px);
+
+    margin-bottom: 24px;
+    color: var(--gray--800);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include sm {
+      @include font(15px, 23px);
+
+      margin-bottom: 20px;
+    }
+  }
+
+  h2,
+  h3 {
+    @include model-reset;
+
+    margin-bottom: 24px;
+    font-weight: 700;
+    color: var(--color-gray--900);
+  }
+
+  h2 {
+    @include font(20px, 30px);
+
+    @include sm {
+      @include font(18px, 28px);
+    }
+  }
+
+  h3 {
+    @include font(18px, 28px);
+
+    @include sm {
+      @include font(16px, 24px);
+    }
+  }
+
+  p {
+    @include model-reset;
+
+    margin-bottom: 24px;
+  }
+
+  blockquote {
+    @include font(20px, 30px);
+    @include model-reset;
+
+    position: relative;
+    margin-bottom: 24px;
+    padding: 20px 60px;
+    padding-right: 5px;
+    font-weight: 700;
+    color: var(--color-gray--900);
+
+    &::before {
+      @include pseudo;
+      @include absolute(left 0 top 20px);
+      @include icon-svg("braces");
+      @include box(28px, 20px);
+    }
+
+    @include md {
+      @include font(18px, 28px);
+    }
+
+    @include sm {
+      @include font(16px, 26px);
+    }
+  }
+
+  ul {
+    @include list-reset;
+    @include flex-column;
+
+    margin-bottom: 24px;
+    gap: 4px;
+
+    li {
+      position: relative;
+      padding-left: 32px;
+
+      &::before {
+        @include pseudo;
+        @include absolute(left 0 top 50%);
+        @include icon-svg("check-circle");
+        @include box(16px);
+
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+.post__share {
+  @include font(16px, 26px);
+  @include flex-center-v;
+
+  font-weight: 700;
+  color: var(--color-gray--700);
+  gap: 12px;
+
+  span {
+    color: var(--color-gray--900);
+  }
+
+  svg {
+    fill: currentcolor;
+  }
+}

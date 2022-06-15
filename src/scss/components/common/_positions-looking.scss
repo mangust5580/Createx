@@ -1,0 +1,32 @@
+.positions-looking {
+  @include flex-column;
+
+  align-items: flex-end;
+
+  @include md {
+    align-items: center;
+  }
+}
+
+.positions-looking__wrapper {
+  position: sticky;
+  top: 0;
+  max-width: 400px;
+}
+
+.positions-looking__title {
+  @include model-reset;
+  @include font(28px, 42px);
+
+  margin-bottom: 24px;
+  font-weight: 700;
+  color: var(--color-gray--900);
+}
+
+.positions-looking__desc {
+  @include model-reset;
+  @include font(18px, 27px);
+
+  margin-bottom: 48px;
+  color: var(--color-gray--800);
+}

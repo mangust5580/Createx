@@ -1,0 +1,13 @@
+.tabs .tabs__content {
+  &--hide {
+    display: none;
+  }
+
+  &--show {
+    display: grid;
+
+    @include md {
+      @include flex-column;
+    }
+  }
+}

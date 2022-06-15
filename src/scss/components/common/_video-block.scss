@@ -1,0 +1,55 @@
+.video-block {
+  @include box(100%, 560px);
+
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius-main);
+
+  &::before {
+    @include pseudo;
+    @include absolute(left 0 right 0 top 0 bottom 0);
+
+    z-index: 3;
+    background-color: f-alpha(var(--color-gray--900), 0.6);
+    transition: opacity ease-in-out 0.2s, visibility ease-in-out 0.2s;
+  }
+
+  &--played {
+    &::before {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  @include md {
+    @include box(100%, 480px);
+  }
+
+  @include sm {
+    @include box(100%, 360px);
+  }
+
+  @media screen and (max-width: 480px) {
+    @include box(100%, 280px);
+  }
+}
+
+.video-block__play {
+  @include absolute(left 50% top 50%);
+
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  transition: background-color ease-in-out 0.2s, opacity ease-in-out 0.2s, visibility ease-in-out 0.2s;
+
+  &--played {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.video-block__video {
+  @include box(100%);
+
+  display: block;
+  object-fit: cover;
+}

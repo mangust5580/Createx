@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="64" xml:space="preserve">
+  <path fill="#FF0808" d="m4.903 26.29 18.194 2.355v-5.419H4.903v3.064z"/>
+  <path fill="#F90000" d="M4.903 29.645h18.194v5.419H4.903z"/>
+  <path fill="red" d="M4.903 41.484h18.194v-5.419L4.903 38.613v2.871z"/>
+  <text transform="matrix(.9667 0 0 1 26.064 37.484)" font-family="&apos;Arial-BoldMT&apos;" font-size="14">HIGHER FIT</text>
+</svg>

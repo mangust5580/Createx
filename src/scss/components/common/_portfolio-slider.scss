@@ -1,0 +1,26 @@
+.portfolio-slider {
+  .portfolio-list {
+    display: flex;
+    gap: 0;
+  }
+
+  .swiper-wrapper {
+    margin-bottom: 100px;
+  }
+
+  @include lg {
+    .swiper-wrapper {
+      margin-bottom: 80px;
+    }
+  }
+
+  @include md {
+    .swiper-wrapper {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.portfolio__slider-nav {
+  flex-wrap: nowrap;
+}

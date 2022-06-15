@@ -1,0 +1,312 @@
+.btn {
+  @include btn-reset;
+  @include link-reset;
+  @include font(14px, 17px);
+
+  border: 1px solid transparent;
+  border-radius: var(--border-radius-main);
+  padding: 16px 30px;
+  box-sizing: border-box;
+  font-family: var(--font-family-main);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  transition: background-color ease-in-out 0.2s, border ease-in-out 0.2s, opacity ease-in-out 0.2s;
+
+  &:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+    border-radius: 2px;
+
+    &:not(:focus-visible) {
+      outline: none;
+    }
+  }
+
+  &:hover {
+    background-color: f-lightness(var(--color-primary), 0.8);
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  &--large {
+    padding: 20px 40px;
+  }
+
+  &--small {
+    padding: 12px 24px;
+  }
+
+  &--outline-primary {
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    background-color: transparent;
+    transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+
+    &:hover {
+      color: var(--color-white);
+      background-color: var(--color-primary);
+    }
+  }
+
+  &--outline-white {
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+    background-color: transparent;
+    transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s, border ease-in-out 0.2s;
+
+    &:hover {
+      border: 1px solid var(--color-white);
+      color: var(--color-gray--800);
+      background-color: var(--color-white);
+    }
+  }
+
+  &--outline-secondary {
+    border: 1px solid var(--color-gray--300);
+    color: var(--color-gray--800);
+    background-color: transparent;
+    transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s, border ease-in-out 0.2s;
+
+    &:hover {
+      border: 1px solid var(--color-gray--300);
+      color: var(--color-gray--800);
+      background-color: var(--color-gray--300);
+    }
+  }
+
+  &--fill-secondary {
+    border: 1px solid var(--color-gray--300);
+    color: var(--color-gray--800);
+    background-color: var(--color-gray--300);
+    transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s, border ease-in-out 0.2s;
+
+    &:hover {
+      border: 1px solid var(--color-gray--300);
+      color: var(--color-gray--800);
+      background-color: f-saturation(var(--color-gray--300), 3);
+    }
+  }
+
+  &--fill-dark {
+    border: 1px solid var(--color-gray--800);
+    color: var(--color-white);
+    background-color: var(--color-gray--800);
+    transition: background-color ease-in-out 0.2s, border ease-in-out 0.2s;
+
+    &:hover {
+      border: 1px solid var(--color-gray--800);
+      background-color: f-lightness(var(--color-gray--800), 0.8);
+    }
+  }
+
+  &--fill-white {
+    border: 1px solid var(--color-white);
+    color: var(--color-gray--800);
+    background-color: var(--color-white);
+    transition: background-color ease-in-out 0.2s, border ease-in-out 0.2s;
+
+    &:hover {
+      border: 1px solid var(--color-white);
+      background-color: f-lightness(var(--color-white), 0.8);
+    }
+  }
+
+  @include lg {
+    padding: 14px 26px;
+
+    &--small {
+      padding: 12px 24px;
+    }
+  }
+
+  @include md {
+    @include font(13px, 16px);
+  }
+}
+
+.btn-icon {
+  @include btn-reset;
+  @include link-reset;
+  @include flex-center;
+  @include box(52px);
+
+  overflow: hidden;
+  border: 1px solid transparent;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  transition: background-color ease-in-out 0.2s, border ease-in-out 0.2s, opacity ease-in-out 0.2s;
+
+  svg {
+    color: inherit;
+    fill: currentcolor;
+    transition: fill ease-in-out 0.2s;
+  }
+
+  &:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+    border-radius: 2px;
+
+    &:not(:focus-visible) {
+      outline: none;
+    }
+  }
+
+  &:hover {
+    border: 1px solid var(--color-primary);
+    background-color: f-lightness(var(--color-primary), 0.8);
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  &--circle {
+    border-radius: 50%;
+
+    &:focus {
+      border-radius: 50%;
+    }
+  }
+
+  &--large {
+    @include box(80px);
+
+    padding: 24px;
+  }
+
+  &--small {
+    @include box(40px);
+  }
+
+  &--outline-secondary {
+    border: 1px solid var(--color-gray--400);
+    color: var(--color-gray--700);
+    background-color: transparent;
+    transition: background-color ease-in-out 0.2s, border ease-in-out 0.2s;
+
+    svg {
+      color: inherit;
+      fill: currentcolor;
+      transition: color ease-in-out 0.2s;
+    }
+
+    &:hover {
+      border: 1px solid var(--color-primary);
+      color: var(--color-primary);
+      background-color: var(--color-white);
+
+      svg {
+        color: inherit;
+        fill: currentcolor;
+      }
+    }
+  }
+
+  &--fill-secondary {
+    border: 1px solid var(--color-gray--300);
+    color: var(--color-gray--700);
+    background-color: var(--color-gray--300);
+    transition: background-color ease-in-out 0.2s, border ease-in-out 0.2s;
+
+    &:hover {
+      border: 1px solid transparent;
+      color: var(--color-gray--800);
+      background-color: f-alpha(var(--color-gray--300), 0.8);
+
+      svg {
+        color: inherit;
+        fill: currentcolor;
+        transition: color ease-in-out 0.2s;
+      }
+    }
+  }
+
+  &--fill-dark {
+    border: 1px solid var(--color-gray--800);
+    color: var(--color-white);
+    background-color: var(--color-gray--800);
+
+    svg {
+      color: inherit;
+      fill: currentcolor;
+      transition: color ease-in-out 0.2s;
+    }
+
+    &:hover {
+      border: 1px solid transparent;
+      color: var(--color-gray--700);
+      background-color: var(--color-white);
+
+      svg {
+        color: inherit;
+        fill: currentcolor;
+      }
+    }
+  }
+
+  &--transparent {
+    border: 1px solid transparent;
+    color: var(--color-gray--800);
+    background-color: transparent;
+
+    svg {
+      color: inherit;
+      fill: currentcolor;
+      transition: color ease-in-out 0.2s;
+    }
+
+    &:hover {
+      border: 1px solid transparent;
+      color: var(--color-primary);
+      background-color: inherit;
+
+      svg {
+        color: inherit;
+        fill: currentcolor;
+      }
+    }
+  }
+
+  &--burger {
+    @include box(34px, 24px);
+
+    position: relative;
+    display: none;
+
+    &::before {
+      @include pseudo;
+      @include icon-svg("burger");
+      @include absolute(left 0 top 0 right 0 bottom 0);
+    }
+
+    @include lg {
+      display: inline-block;
+    }
+  }
+
+  &--close {
+    @include box(24px);
+
+    position: relative;
+    transition: filter ease-in-out 0.2s;
+
+    &::before {
+      @include pseudo;
+      @include icon-svg("close");
+      @include absolute(left 0 top 0 right 0 bottom 0);
+    }
+
+    &:hover {
+      &::before {
+        filter: brightness(0.4);
+      }
+    }
+  }
+}

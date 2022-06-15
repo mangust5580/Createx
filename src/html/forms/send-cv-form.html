@@ -1,0 +1,41 @@
+<form action="#" class="send-cv-form form" autocomplete="off">
+  <h2 class="form-title form-title--center">Send your CV</h2>
+  <label class="form__label">
+    <span class="form__caption">Name*</span>
+    <input class="form__input field" type="text" name="name" placeholder="Your name" aria-label="Enter your name"
+      value="" required>
+  </label>
+  <label class="form__label dropdown-block">
+		<span class="form__caption">Location*</span>
+		<input class="form__input dropdown-block__input-select" type="text" name="select-location" value="" required>
+		<button class="form__select dropdown-block__dropdown" type="button">New York</button>
+		<ul class="dropdown-block__list">
+			<li class="dropdown-block__item" data-dropdown-value="New York">New York</li>
+			<li class="dropdown-block__item" data-dropdown-value="Amsterdam">Amsterdam</li>
+			<li class="dropdown-block__item" data-dropdown-value="Athens">Athens</li>
+			<li class="dropdown-block__item" data-dropdown-value="Barcelona">Barcelona</li>
+			<li class="dropdown-block__item" data-dropdown-value="Belgrade">Belgrade</li>
+			<li class="dropdown-block__item" data-dropdown-value="Brussels">Brussels</li>
+		</ul>
+	</label>
+  <label class="form__label">
+    <span class="form__caption">Phone*</span>
+    <input class="form__input field" type="tel" name="phone" placeholder="Your phone number" aria-label="Enter your phone" value="" required>
+  </label>
+  <label class="form__label">
+    <span class="form__caption">Email*</span>
+    <input class="form__input field" type="email" name="email" placeholder="Your working email"
+      aria-label="Enter your email" value="" required>
+  </label>
+  <label class="form__label form__label--wide">
+    <span class="form__caption">Сovering letter</span>
+    <textarea class="form__textarea textarea textarea--lg" name="covering_letter" placeholder="Your covering letter" aria-label="Enter your covering letter"></textarea>
+  </label>
+  <label class="form__label file-block">
+    <input class="file-block__file file" type="file" required>
+    <span class="file-block__text">Attach your CV*</span>
+  </label>
+  <div class="send-cv-form__bottom centered">
+    <button class="send-cv-form__btn-submit btn btn--small" type="submit">Send</button>
+  </div>
+</form>

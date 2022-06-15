@@ -1,0 +1,14 @@
+.news-list {
+  @include list-reset;
+  @include grid-12;
+
+  row-gap: 60px;
+}
+
+.news-list__item {
+  grid-column: 6 span;
+
+  @include md {
+    grid-column: 12 span;
+  }
+}

@@ -1,0 +1,76 @@
+.quote {
+  @include model-reset;
+
+  position: relative;
+  padding: 30px;
+
+  &::before {
+    @include pseudo;
+    @include icon-svg("braces");
+    @include absolute(left -20px top 10px);
+    @include box(28px, 20px);
+
+    @include sm {
+      @include absolute(left 0 top 0);
+    }
+  }
+
+  @include sm {
+    padding: 40px 0;
+  }
+}
+
+.quote__content {
+  margin-bottom: 60px;
+}
+
+.quote__text {
+  @include model-reset;
+  @include font(20px, 30px);
+
+  font-weight: 700;
+  color: var(--color-gray--900);
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  @include md {
+    @include font(18px, 26px);
+  }
+
+  @include sm {
+    @include font(16px, 22px);
+  }
+}
+
+.quote__footer {
+  display: flex;
+  flex-direction: column;
+  min-height: 70px;
+  box-sizing: border-box;
+  background-image: url("../images/signature.svg");
+  background-position: right center;
+  background-size: 100px 68px;
+  background-repeat: no-repeat;
+
+  @media screen and (max-width: 680px) {
+    padding-bottom: 120px;
+    text-align: center;
+    background-position: bottom;
+  }
+}
+
+.quote__author {
+  @include font(16px, 26px);
+
+  margin-bottom: 4px;
+  font-weight: 700;
+  color: var(--color-gray--900);
+}
+
+.quote__position {
+  @include font(14px, 21px);
+
+  color: var(--color-gray--700);
+}

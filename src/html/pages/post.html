@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html class="page post-page" lang="en">
+@include('config/head.html', {
+  title: "Createx | Post Page",
+  description: "Cras ultrices leo vitae non viverra"
+})
+
+<body id="page" class="page__body">
+  @include('layout/header/news-header.html', {
+    "modify": "main-header--secondary"
+  })
+  <main class="page-main">
+    @include('common/hero/post-hero.html')
+    @include('common/post/post.html')
+    @include('common/contacts/contacts.html')
+  </main>
+  @include('layout/footer/page-footer.html')
+</body>
+
+</html>

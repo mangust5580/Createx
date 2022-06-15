@@ -1,0 +1,26 @@
+.categories {
+  .news-article__meta {
+    min-width: inherit;
+  }
+}
+
+.categories__container {
+  padding-top: 120px;
+  padding-bottom: 180px;
+
+  @include md {
+    padding-top: 100px;
+    padding-bottom: 140px;
+  }
+
+  @include sm {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+}
+
+.categories__tabs {
+  margin-bottom: 60px;
+
+  // .tabs-nav {}
+}

@@ -1,0 +1,59 @@
+.history-nav {
+  @include list-reset;
+
+  position: relative;
+
+  &::before {
+    @include pseudo;
+
+    left: 3px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: f-alpha(var(--color-gray--600), 0.5);
+  }
+}
+
+.history-nav__item {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.history-nav__btn {
+  @include btn-reset;
+  @include font(28px, 42px);
+
+  position: relative;
+  padding-left: 40px;
+  font-weight: 700;
+  color: var(--color-gray--600);
+  transition: color 0.3s ease-in-out;
+
+  &::before,
+  &::after {
+    @include pseudo;
+  }
+
+  &::before {
+    @include box(1px, 16px);
+
+    left: 3px;
+    top: 13px;
+    background-color: var(--color-gray--200);
+  }
+
+  &::after {
+    @include box(8px);
+
+    left: 0;
+    top: 17px;
+    border-radius: 50%;
+    background-color: currentcolor;
+  }
+
+  &--active {
+    color: var(--color-primary);
+    pointer-events: none;
+  }
+}

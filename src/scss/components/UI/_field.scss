@@ -1,0 +1,26 @@
+.field {
+  @include font(14px, 17px);
+
+  position: relative;
+  display: inline-block;
+  border: 1px solid var(--color-gray--400);
+  border-radius: var(--border-radius-main);
+  padding: 12px 16px;
+  width: 100%;
+  box-sizing: border-box;
+  color: var(--color-text-default);
+  background-color: var(--color-gray--200);
+
+  &::placeholder {
+    @include font(14px, 17px);
+
+    font-family: var(--font-family-main);
+    color: var(--color-gray--600);
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid rgb(255 90 48 / 40%);
+    box-shadow: var(--box-shadow-main);
+  }
+}

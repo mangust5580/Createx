@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html class="page services-page" lang="en">
+@include('config/head.html', {
+  title: "Createx | Work Inner Page",
+  description: "Cras ultrices leo vitae non viverra"
+})
+
+<body id="page" class="page__body">
+  @include('layout/header/work-header.html', {
+    "modify": "main-header--secondary"
+  })
+  <main class="page-main">
+    @include('common/hero/work-inner-hero.html')
+    @include('common/project-goal/project-goal.html')
+    @include('common/decisions/decisions.html')
+    @include('common/similar-projects/similar-projects.html')
+    @include('common/contacts/contacts.html')
+  </main>
+  @include('layout/footer/page-footer.html')
+</body>
+
+</html>

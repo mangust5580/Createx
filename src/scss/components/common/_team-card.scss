@@ -1,0 +1,85 @@
+.team-card {
+  position: relative;
+  overflow: hidden;
+  max-width: 285px;
+  max-height: 416px;
+
+  figure {
+    @include model-reset;
+  }
+
+  &:hover {
+    .team-card__social-list {
+      transform: translateY(0);
+      transition: transform ease-in-out 0.4s;
+    }
+  }
+
+  @include sm {
+    max-width: inherit;
+  }
+}
+
+.team-card__picture {
+  margin-bottom: 16px;
+  background-color: var(--color-gray--500);
+
+  img {
+    width: 100%;
+  }
+}
+
+.team-card__name {
+  @include font(20px, 30px);
+
+  margin-bottom: 4px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-gray--800);
+
+  @include sm {
+    @include font(18px, 28px);
+  }
+}
+
+.team-card__position {
+  @include font(20px, 26px);
+
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: var(--color-gray--700);
+
+  @include sm {
+    @include font(18px, 28px);
+  }
+}
+
+.team-card__social-list {
+  @include absolute(left 0 right 0 bottom 76px);
+  @include flex-center;
+
+  padding: 20px 0;
+  background-color: f-alpha(var(--color-primary), 0.7);
+  transform: translateY(300%);
+
+  .social-list__link {
+    &:hover {
+      color: f-lightness(var(--color-white), 0.9);
+      fill: currentcolor;
+
+      .social-list__icon {
+        fill: currentcolor;
+      }
+    }
+  }
+
+  .social-list__icon {
+    color: var(--color-white);
+    fill: currentcolor;
+  }
+
+  @media screen and (max-width: 480px) {
+    bottom: 0;
+  }
+}

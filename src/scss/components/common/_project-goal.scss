@@ -1,0 +1,56 @@
+.project-goal__container {
+  @include grid-12;
+
+  padding-top: 100px;
+  padding-bottom: 120px;
+  gap: 30px;
+
+  @include lg {
+    display: block;
+  }
+
+  @include md {
+    padding-top: 50px;
+    padding-bottom: 80px;
+  }
+
+  @include sm {
+    padding-bottom: 20px;
+  }
+}
+
+.project-goal__title {
+  margin-bottom: 40px;
+
+  @include lg {
+    text-align: center;
+  }
+}
+
+.project-goal__col {
+  grid-column: 6 span;
+
+  &:first-child {
+    padding-top: 30px;
+  }
+
+  &:last-child {
+    display: flex;
+    justify-content: flex-end;
+
+    @include lg {
+      justify-content: center;
+    }
+  }
+}
+
+.project-goal__desc {
+  @include font(18px, 27px);
+
+  margin-bottom: 20px;
+  color: var(--color-gray--800);
+
+  @include sm {
+    text-align: center;
+  }
+}

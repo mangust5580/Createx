@@ -1,0 +1,42 @@
+.main-header {
+  z-index: 50;
+
+  &--secondary {
+    @include absolute(left 0 right 0 top 0);
+  }
+}
+
+.main-header__nav {
+  margin-right: auto;
+
+  &--main {
+    background-color: var(--color-white);
+  }
+
+  @include lg {
+    margin-right: 0;
+  }
+}
+
+.main-header__container {
+  @include flex-center-v;
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  gap: 30px 60px;
+
+  @include xl {
+    gap: 30px;
+  }
+
+  @include lg {
+    justify-content: space-between;
+  }
+
+  @include md {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}

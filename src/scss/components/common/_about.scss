@@ -1,0 +1,17 @@
+.about {
+  color: var(--color-white);
+}
+
+.about__container {
+  padding-top: 120px;
+  padding-bottom: 60px;
+
+  @include lg {
+    padding-top: 100px;
+  }
+
+  @include sm {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+}

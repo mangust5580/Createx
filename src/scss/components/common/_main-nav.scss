@@ -1,0 +1,50 @@
+.main-nav {
+  @include flex-center-v;
+}
+
+.main-nav__wrapper {
+  position: relative;
+  display: none;
+  padding: 60px 40px 20px;
+
+  &--show {
+    @include fixed(left 0 top 0 right 0 bottom 0);
+
+    z-index: 500;
+    display: block;
+    background-color: var(--color-white);
+
+    .nav-list {
+      display: block;
+      margin-bottom: 50px;
+      text-align: center;
+
+      &__item {
+        margin-bottom: 30px;
+      }
+    }
+
+    .contacts-media {
+      display: block;
+
+      &__list {
+        display: block;
+        margin-left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &__item {
+        margin-bottom: 30px;
+      }
+
+      &__link {
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.main-nav__btn-close {
+  @include absolute(right 20px top 20px);
+}

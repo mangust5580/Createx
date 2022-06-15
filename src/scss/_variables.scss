@@ -1,0 +1,57 @@
+@import "./mixins/colors";
+
+$colors: (
+  white: #fff,
+  black: #000,
+  gray--900: #1e212c,
+  gray--800: #424551,
+  gray--700: #787a80,
+  gray--600: #9a9ca5,
+  gray--500: #b3b7bc,
+  gray--400: #d7dadd,
+  gray--300: #e5e8ed,
+  gray--200: #f4f5f7,
+  gray--100: #f9f9f9,
+  warning: #f89828,
+  info: #5a87fc,
+  success: #03cea4,
+  danger: #ff4242,
+  primary: #ff5a30,
+);
+
+:root {
+  // GRID-GAP
+  --grid-gap: 30px;
+
+  // FONT-FAMILY
+  --font-family-main: "Ubuntu", "Tahoma", sans-serif;
+  --font-family-secondary: "Lato", "Arial", sans-serif;
+
+  // SLIDER SPEED
+  --main-hero-slider-speed: 500;
+
+  // BOX SHADOW
+  --box-shadow-sm:
+    0 80px 80px -20px rgb(154 156 165 / 8%),
+    0 30px 24px -10px rgb(154 156 165 / 5%),
+    0 12px 10px -6px rgb(154 156 165 / 4%),
+    0 4px 4px -4px rgb(30 33 44 / 3%);
+  --box-shadow-lg:
+    0 80px 80px -20px rgb(154 156 165 / 16%),
+    0 30px 24px -10px rgb(154 156 165 / 10%),
+    0 12px 10px -6px rgb(154 156 165 / 8%),
+    0 4px 4px -4px rgb(30 33 44 / 5%);
+  --box-shadow-main: var(--box-shadow-sm);
+
+  // BORDER-RADIUS
+  --border-radius-sm: 4px;
+  --border-radius-main: var(--border-radius-sm);
+
+  // COLORS
+  --color-body-bg: var(--color-white);
+  --color-text-default: var(--color-gray--700);
+
+  @each $key, $value in $colors {
+    @include defineColorHSL(--color-#{$key}, $value);
+  }
+}

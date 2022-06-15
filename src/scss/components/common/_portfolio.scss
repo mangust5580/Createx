@@ -1,0 +1,55 @@
+.portfolio {
+  &--tabs {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 100px;
+
+    .portfolio-list__item {
+      display: none;
+
+      &--visible {
+        display: block;
+      }
+    }
+  }
+
+  &--slider {
+    .portfolio__container {
+      padding-top: 120px;
+      padding-bottom: 120px;
+
+      @include lg {
+        padding-bottom: 100px;
+      }
+
+      @include md {
+        padding-bottom: 80px;
+      }
+
+      @include sm {
+        padding-bottom: 60px;
+      }
+    }
+  }
+
+  @include md {
+    .slider-nav {
+      display: none;
+    }
+  }
+}
+
+.portfolio__top {
+  @include flex-center-v;
+
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.portfolio__title {
+  max-width: 720px;
+
+  @include lg {
+    @include font(36px, 40px);
+  }
+}

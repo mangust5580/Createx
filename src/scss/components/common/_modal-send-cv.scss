@@ -1,0 +1,16 @@
+.modal-send-cv {
+  .send-cv-form .form__caption {
+    @include v-visible;
+
+    margin-bottom: 8px;
+  }
+
+  .send-cv-form__btn-submit {
+    border-radius: var(--border-radius-main);
+    width: 100%;
+  }
+}
+
+.send-cv-form__bottom {
+  margin-top: 40px;
+}

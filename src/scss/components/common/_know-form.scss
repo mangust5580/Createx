@@ -1,0 +1,98 @@
+.know-form {
+  position: relative;
+  top: 180px;
+  z-index: 30;
+  border-radius: var(--border-radius-main);
+  box-shadow: var(--box-shadow-main);
+  background-color: var(--color-white);
+
+  .form__legend {
+    @include v-hidden;
+  }
+
+  .form__label {
+    margin-bottom: 0;
+
+    &--message-textarea {
+      display: none;
+
+      @include lg {
+        display: inline-block;
+      }
+    }
+
+    &--message-input {
+      @include lg {
+        display: none;
+      }
+    }
+  }
+
+  .form__fieldset {
+    &--horizontal {
+      @include sm {
+        display: block;
+      }
+    }
+  }
+
+  .form__btn {
+    @include md {
+      width: 50%;
+    }
+
+    @include sm {
+      margin-left: 0;
+      width: 100%;
+      transform: inherit;
+    }
+  }
+
+  @include xl {
+    top: 150px;
+  }
+
+  @include lg {
+    top: 0;
+    box-shadow: inherit;
+  }
+}
+
+.know-form__wrapper {
+  padding: 48px 60px;
+
+  @include lg {
+    padding: inherit;
+  }
+}
+
+.know-form__title {
+  margin-bottom: 40px;
+}
+
+.know-form__content {
+  @include flex-center-h;
+
+  align-items: flex-end;
+  gap: 24px;
+
+  .form__label {
+    width: 50%;
+
+    @include lg {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  }
+
+  @include lg {
+    display: block;
+
+    .form__btn {
+      margin-top: 20px;
+      margin-left: 50%;
+      width: 40%;
+      transform: translateX(-50%);
+    }
+  }
+}

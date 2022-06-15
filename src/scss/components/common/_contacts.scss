@@ -1,0 +1,45 @@
+.contacts {
+  position: relative;
+}
+
+.contacts__container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @include sm {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @include mb {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.contacts__bg {
+  background-color: var(--color-gray--300);
+}
+
+.contacts__form {
+  margin-left: auto;
+  border: 1px solid var(--color-gray--300);
+  border-radius: var(--border-radius-main);
+  padding: 48px 40px;
+  max-width: 500px;
+  box-shadow: var(--box-shadow-lg);
+  background-color: var(--color-white);
+
+  @include lg {
+    margin-left: 50%;
+    width: 70%;
+    max-width: inherit;
+    transform: translateX(-50%);
+  }
+
+  @include md {
+    margin-left: inherit;
+    width: 100%;
+    transform: none;
+  }
+}

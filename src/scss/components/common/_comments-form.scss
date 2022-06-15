@@ -1,0 +1,36 @@
+.comments-form {
+  padding-bottom: 180px;
+
+  .form__fieldset {
+    display: flex;
+    gap: 30px;
+
+    @include sm {
+      display: block;
+    }
+  }
+
+  .form__label {
+    width: 100%;
+  }
+
+  @include lg {
+    padding-bottom: 150px;
+  }
+
+  @include md {
+    padding-bottom: 100px;
+  }
+
+  @include sm {
+    padding-bottom: 80px;
+  }
+
+  @include mb {
+    padding-bottom: 60px;
+  }
+}
+
+.comments-form__bottom {
+  margin-top: 48px;
+}

@@ -1,0 +1,13 @@
+.partners__container {
+  padding-top: 80px;
+  padding-bottom: 65px;
+
+  @include md {
+    padding-top: 50px;
+  }
+
+  @include sm {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}

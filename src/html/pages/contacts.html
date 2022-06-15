@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html class="page main-page" lang="en">
+@include('config/head.html', {
+  title: "Createx | Contacts Page",
+  description: "Cras ultrices leo vitae non viverra"
+})
+
+<body id="page" class="page__body">
+  @include('layout/header/contacts-header.html', {
+    "modify": "main-header--secondary"
+  })
+  <main class="page-main">
+    @include('common/hero/contacts-hero.html')
+    @include('common/contacts/detailed-contacts.html')
+    @include('common/contacts/contacts-info.html')
+  </main>
+  @include('layout/footer/page-footer.html')
+</body>
+
+</html>

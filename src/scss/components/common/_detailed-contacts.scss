@@ -1,0 +1,49 @@
+.detailed-contacts__container {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  @include md {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include sm {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  @include mb {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.detailed-contacts__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+
+  @include sm {
+    display: block;
+  }
+}
+
+.detailed-contacts__picture {
+  flex-shrink: 0;
+  background-color: var(--color-gray--500);
+
+  @include xl {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include lg {
+      width: 50%;
+    }
+
+    @include sm {
+      margin-bottom: 30px;
+      width: 100%;
+    }
+  }
+}

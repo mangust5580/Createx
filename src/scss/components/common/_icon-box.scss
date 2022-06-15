@@ -1,0 +1,52 @@
+.icon-box {
+  &--light {
+    .icon-box__title {
+      color: var(--color-white);
+    }
+
+    .icon-box__desc {
+      color: f-alpha(var(--color-white), 0.6);
+    }
+  }
+
+  @include sm {
+    @include flex-column;
+    @include flex-center-v;
+  }
+}
+
+.icon-box__icon {
+  margin-bottom: 24px;
+  fill: var(--color-primary);
+
+  @include md {
+    @include box(40px);
+  }
+}
+
+.icon-box__title {
+  @include model-reset;
+  @include font(20px, 30px);
+
+  margin-bottom: 8px;
+  color: var(--color-gray--900);
+
+  @include md {
+    @include font(18px, 26px);
+  }
+}
+
+.icon-box__desc {
+  @include model-reset;
+  @include font(16px, 25px);
+
+  color: var(--color-gray--700);
+
+  @include md {
+    @include font(15px, 24px);
+  }
+
+  @include sm {
+    max-width: 60%;
+  }
+}

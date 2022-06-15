@@ -1,0 +1,25 @@
+.form__fieldset {
+  @include fieldset-reset;
+
+  &--horizontal {
+    display: flex;
+    gap: 24px;
+  }
+}
+
+.form__legend {
+  margin-bottom: 20px;
+}
+
+.form__label {
+  @include flex-column;
+
+  margin-bottom: 20px;
+}
+
+.form__caption {
+  @include font(14px, 21px);
+
+  margin-bottom: 8px;
+  color: var(--color-gray--800);
+}

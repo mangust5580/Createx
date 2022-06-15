@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html class="page services-page" lang="en">
+@include('config/head.html', {
+  title: "Createx | Work Page",
+  description: "Cras ultrices leo vitae non viverra"
+})
+
+<body id="page" class="page__body">
+  @include('layout/header/work-header.html', {
+    "modify": "main-header--secondary"
+  })
+  <main class="page-main">
+    @include('common/hero/work-hero.html')
+    @include('common/portfolio/portfolio-tabs.html')
+		@include('common/testimonials/testimonials.html')
+		@include('common/partners/partners.html')
+    @include('common/contacts/contacts.html')
+  </main>
+  @include('layout/footer/page-footer.html')
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html class="page services-page" lang="en">
+@include('config/head.html', {
+  title: "Createx | Services Page",
+  description: "Cras ultrices leo vitae non viverra"
+})
+
+<body id="page" class="page__body">
+  @include('layout/header/services-header.html', {
+    "modify": "main-header--secondary"
+  })
+  <main class="page-main">
+    @include('common/hero/services-hero.html')
+    @include('common/services/services-content.html')
+    @include('common/contacts/contacts.html')
+  </main>
+  @include('layout/footer/page-footer.html')
+</body>
+
+</html>

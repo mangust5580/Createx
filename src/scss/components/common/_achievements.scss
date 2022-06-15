@@ -1,0 +1,24 @@
+.achievements {
+  .achievements__list {
+    .icon-boxes__item {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.achievements__container {
+  padding-top: 120px;
+  padding-bottom: 60px;
+
+  @include xl {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  @include sm {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}

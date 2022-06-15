@@ -1,0 +1,84 @@
+.positions-item {
+  @include flex-center-v;
+
+  justify-content: space-between;
+  border: 1px solid var(--color-gray--300);
+  border-radius: var(--border-radius-main);
+  padding: 32px 40px;
+  background-color: var(--color-white);
+  gap: 40px;
+
+  @include lg {
+    display: block;
+  }
+
+  @include md {
+    display: flex;
+  }
+
+  @include sm {
+    display: block;
+    padding: 20px 30px;
+  }
+}
+
+.positions-item__content {
+  @include lg {
+    margin-bottom: 20px;
+  }
+}
+
+.positions-item__meta {
+  @include font(14px, 21px);
+
+  margin-bottom: 8px;
+  color: var(--color-gray--700);
+}
+
+.positions-item__city {
+  --icon-width: 11px;
+
+  position: relative;
+  margin-right: 24px;
+  padding-left: calc(var(--icon-width) + 10px);
+
+  &::before {
+    @include pseudo;
+    @include icon-svg("location");
+    @include box(var(--icon-width), 14px);
+    @include absolute(top 50% left 0);
+
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    @include pseudo;
+    @include absolute(right -13px top 2px bottom 2px);
+
+    width: 1px;
+    background-color: currentcolor;
+  }
+}
+
+.positions-item__time {
+  --icon-width: 15px;
+
+  position: relative;
+  padding-left: calc(var(--icon-width) + 10px);
+
+  &::before {
+    @include pseudo;
+    @include icon-svg("clock");
+    @include box(var(--icon-width));
+    @include absolute(top 50% left 0);
+
+    transform: translateY(-50%);
+  }
+}
+
+.positions-item__title {
+  @include model-reset;
+  @include font(20px, 30px);
+
+  color: var(--color-gray--900);
+}
